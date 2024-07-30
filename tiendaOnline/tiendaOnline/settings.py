@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'tienda',
+    'livereload',
 ]
 GRAPH_MODELS ={
 'all_applications': True,
