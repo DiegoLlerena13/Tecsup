@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-{% load static %}
 
 {% block content %}
 <div class="wrapper">
+    {% load static %}
     <header class="header-mobile">
         <h1 class="logo">
-            <img id="atras" src="{static 'img/logo.png'}" alt="">
+            <img id="atras" src="{% static '/img/logo.png' %}" alt="">
         </h1>
         <button class="open-menu" id="open-menu">
             <i class="bi bi-list"></i>
@@ -17,7 +17,7 @@
         </button>
         <header>
             <h1 class="logo">
-                <img src="img/logo.png" alt="">
+                <img src="{% static '/img/logo.png' %}" alt="">
             </h1>
         </header>
         <nav>
@@ -46,7 +46,7 @@
             </ul>
         </nav>
         <footer>
-            <p class="texto-footer">© 2022</p>
+            <p class="texto-footer">© 2023</p>
         </footer>
     </aside>
     <main>
@@ -55,10 +55,9 @@
             <!-- Esto se va a rellenar con JS -->
         </div>
     </main>
-     
+
 </div>
 
-<script src="{% static 'js/main.js' %}"></script>
 <script> 
     const atras= document.getElementById('atras');
     atras.addEventListener('click', e=>{
@@ -66,5 +65,3 @@
     });
 </script>
 {% endblock %}
-
-
